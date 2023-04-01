@@ -35,23 +35,54 @@ header.style.borderBottom='solid 3px #000';  //now here we apply border to its
 // }
 
 //GET_ELEMENT_BY_TAG_NAME
-var li=document.getElementsByTagName('li');
-console.log(li);
-console.log(li[1]);
-li[1].textContent='Hello 2';
-li[1].style.fontWeight='bold';
-li[1].style.backgroundColor='tomato';
+// var li=document.getElementsByTagName('li');
+// console.log(li);
+// console.log(li[1]);
+// li[1].textContent='Hello 2';
+// li[1].style.fontWeight='bold';
+// li[1].style.backgroundColor='tomato';
 
-for(var i=0;i<li.length;i++){
-    li[i].style.fontWeight='bold';
-    li[i].textContent='Item '+i;
-    li[i].style.backgroundColor='tomato';
+// for(var i=0;i<li.length;i++){
+//     li[i].style.fontWeight='bold';
+//     li[i].textContent='Item '+i;
+//     li[i].style.backgroundColor='tomato';
+// }
+
+
+// // QUERYSELECTOR  //it is only use for one item if you want to use it for more item then apply all at the end
+// var header=document.querySelector('#main-header');
+// header.style.borderBottom='solid 4px #ccc';
+
+// var input=document.querySelector('input');
+// input.value='Hello World'
+
+// var submit=document.querySelector('input[type="submit"]');
+// submit.value="SEND";
+
+// var item=document.querySelector(".list-group-item");
+// item.style.color="red";
+
+// var lastItem=document.querySelector(".list-group-item:last-child");
+// lastItem.style.color="blue";
+
+// var secondItem=document.querySelector(".list-group-item:nth-child(2)");
+// secondItem.style.color="coral";
+
+//QUERYSELECTORALL//
+var titles=document.querySelectorAll(".title");
+
+console.log(titles);
+titles[0].textContent="Hello";
+
+var odd=document.querySelectorAll("li:nth-child(odd)");
+var even=document.querySelectorAll("li:nth-child(even)");
+
+for(var i=0;i<odd.length;i++){
+    
+    odd[i].style.backgroundColor="#f4f4f4";
+    even[i].style.backgroundColor="#ccc";
+    
 }
-
-
-// QUERYSELECTOR
-var header=document.querySelector('#main-header');
-header.style.borderBottom='solid 4px #ccc';
-
-var input=document.querySelector('input');
-input.value='Hello World'
+// task
+even[0].style.color="green";
+odd[1].style.visibility = "hidden"
