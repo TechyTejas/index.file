@@ -146,6 +146,6 @@ console.log(newDiv);
 
 container.insertBefore(newDiv,h1);  //noyget
 
-// com7
+// com7_2
 let parentnode = document.getElementById('items');
 parentnode.innerHTML = '<li class="list-group-item">Hello World</li>' + parentnode.innerHTML
