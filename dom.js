@@ -69,20 +69,83 @@ header.style.borderBottom='solid 3px #000';  //now here we apply border to its
 // secondItem.style.color="coral";
 
 //QUERYSELECTORALL//
-var titles=document.querySelectorAll(".title");
+// var titles=document.querySelectorAll(".title");
 
-console.log(titles);
-titles[0].textContent="Hello";
+// console.log(titles);
+// titles[0].textContent="Hello";
 
-var odd=document.querySelectorAll("li:nth-child(odd)");
-var even=document.querySelectorAll("li:nth-child(even)");
+// var odd=document.querySelectorAll("li:nth-child(odd)");
+// var even=document.querySelectorAll("li:nth-child(even)");
 
-for(var i=0;i<odd.length;i++){
+// for(var i=0;i<odd.length;i++){
     
-    odd[i].style.backgroundColor="#f4f4f4";
-    even[i].style.backgroundColor="#ccc";
+//     odd[i].style.backgroundColor="#f4f4f4";
+//     even[i].style.backgroundColor="#ccc";
     
-}
+// }
 // task
-even[0].style.color="green";
-odd[1].style.visibility = "hidden"
+//even[0].style.color="green";
+//odd[1].style.visibility = "hidden"
+
+// TRAVEERSING THE DOM
+var itemlist=document.querySelector('#items');
+//parentnode
+// console.log(itemlist.parentNode);  // thiw will give parent node of items
+// itemlist.parentNode.style.backgroundColor="pink";
+// // we want to get parentNode of any dom ele we use over it again and again
+// console.log(itemlist.parentNode.parentNode.parentNode);
+
+//parenElement
+// The parentNode method will always return the parent, but parentElement will return null if the parent happens to be something other than an element
+// console.log(itemlist.parentElement);
+// itemlist.parentElement.style.backgroundColor="pink";
+// console.log(itemlist.parentElement.parentElement.parentElement);
+
+//childnode
+//console.log(itemlist.childNodes);
+//Element.children returns only element children, while Node.childNodes returns all node children.
+// console.log(itemlist.children);
+// console.log(itemlist.children[1]);
+// itemlist.children[1].style.backgroundColor="yellow";
+
+//FirstChild
+// console.log(itemlist.firstChild);
+// //firstElementChild
+// console.log(itemlist.firstElementChild);
+// itemlist.firstElementChild.textContent="Hello 1";
+
+//LastChild
+// console.log(itemlist.lastChild);
+// itemlist.lastElementChild.textContent="Hello 4";
+
+//nextSibling
+// console.log(itemlist.previousSibling);
+//previousElementSibling
+// console.log(itemlist.previousElementSibling);
+// itemlist.previousElementSibling.style.color="green";
+// itemlist.previousElementSibling.textContent="Hellow World"
+
+// createElement
+//Create a div
+var newDiv=document.createElement('div');
+//Add class
+newDiv.className='Hello';
+//Add id
+newDiv.id='Hello1'
+//Add attribute
+newDiv.setAttribute("title","Hello Div");
+//Create text node
+var newDivText=document.createTextNode("Hello World");
+//Add text to div
+newDiv.appendChild(newDivText);
+
+var container=document.querySelector('header .container');
+var h1=document.querySelector('header h1');
+
+console.log(newDiv);
+
+container.insertBefore(newDiv,h1);  //noyget
+
+// com7
+let parentnode = document.getElementById('items');
+parentnode.innerHTML = '<li class="list-group-item">Hello World</li>' + parentnode.innerHTML
