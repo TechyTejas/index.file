@@ -11,11 +11,11 @@ var headerTitle=document.getElementById("header-title");
 var header=document.getElementById("main-header");  //here we store main header
 console.log(headerTitle);
 // headerTitle.textContent="Hello";
-// headerTitle.innerText="okay";
-//console.log(headerTitle.innerText);
-//headerTitle.innerHTML='<h3>Hello</h3>';  // we put html code into html code bu using this
+//headerTitle.innerText="okay";
+// console.log(headerTitle.innerText);
+// headerTitle.innerHTML='<h2>Item lister</h2>';  // we put html code into html code bu using this
 //headerTitle.style.borderBottom='solid 3px #000';
-header.style.borderBottom='solid 3px #000';  //now here we apply border to its
+// header.style.borderBottom='solid 3px #000';  //now here we apply border to its
 
 // //GET_ELEMENT_BY_CLASS_NAME
 // var items=document.getElementsByClassName('list-group-item');
@@ -144,7 +144,7 @@ var h1=document.querySelector('header h1');
 
 console.log(newDiv);
 
-container.insertBefore(newDiv,h1);  //noyget
+container.insertBefore(newDiv,h1);  //noget
 
 // com7_2
 let parentnode = document.getElementById('items');
